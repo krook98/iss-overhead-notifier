@@ -3,13 +3,14 @@ from datetime import datetime
 import smtplib
 import time
 
-MY_EMAIL = 'jjjsokal@gmail.com'  # feel free to enter :)
-MY_PASSWORD = 'Dwight123!'  # feel free to enter :)
-RECEIVER = 'jakub.sokalski@yahoo.com'
+MY_EMAIL = {}  # feel free to enter :)
+MY_PASSWORD = {}  # feel free to enter :)
+RECEIVER = {}  # feel free to enter :)
 
 # Warsaw, Ursynow
 MY_LAT = 52.163704
 MY_LONG = 21.023471
+
 
 def is_iss_overhead():
     response = requests.get(url='http://api.open-notify.org/iss-now.json')
@@ -42,6 +43,7 @@ def is_night():
 
     if time_now >= sunset or time_now <= sunrise:
         return True
+
 
 while True:
     time.sleep(60)
